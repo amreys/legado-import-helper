@@ -2,7 +2,7 @@
 
 # Legado / Yuedu Source Importer (Mobile)
 
-Open a Legado source link in a mobile browser — a button appears in the bottom-right corner, tap it to jump straight into the app's **Network Import**.
+Open a Legado source link in a mobile browser; the floating button in the bottom-right corner opens the client's **Network Import** in one tap.
 
 [![License](https://img.shields.io/badge/license-MIT-4f46e5)](LICENSE)
 [![Version](https://img.shields.io/badge/version-2.4.1-4f46e5)](legado-import-helper.user.js)
@@ -16,23 +16,23 @@ Open a Legado source link in a mobile browser — a button appears in the bottom
 
 ## Overview
 
-Legado already supports importing from a URL. The friction is on the web side: a source link on a web page cannot be opened directly. You have to copy the URL, switch to the app, go to Book Sources, pick Network Import, paste, and confirm.
+Legado supports importing from a URL, but source links on web pages have no direct entry point: the URL must be copied, the client opened, Book Sources → Network Import selected, then pasted and confirmed.
 
-This script adds a floating button to source pages. On tap, it hands the current page URL to the app through the `legado://` / `yuedu://` scheme and lands directly on Network Import — no copying, no pasting, no hand-assembled URLs.
+This script injects a floating button into source pages. On tap, it passes the current page URL to the client through the `legado://` / `yuedu://` scheme and opens Network Import directly, removing the copy-paste step and the risk of malformed hand-built URLs.
 
 ## Features
 
 | Feature | Description |
 |:--|:--|
-| One-tap network import | The button opens the app's Network Import with the URL pre-filled |
+| One-tap network import | Opens the client's Network Import with the URL pre-filled |
 | Eight source types | Book sources, RSS sources, replace rules, dict rules, TTS engines, themes, reading layouts, TOC rules |
-| Mixed-package detection | When one file contains several types, the type is inferred from content rather than the file name |
-| Confirm before bulk import | More than 10 sources at once shows a list (first 5 + total) before anything is imported |
+| Mixed-package detection | When a single file contains several types, the type is inferred from content rather than the file name |
+| Confirm before bulk import | More than 10 sources at once shows a list (first 5 + total) for confirmation before anything is imported |
 | Button shows the name | The button label is the source name, or the group name when one exists |
-| Two copy fallbacks | If the app does not open, the panel offers "Copy source link" and "Copy import link" |
-| Draggable | Move the button anywhere it does not cover the text |
-| Accidental-tap guard | Collapses to a small icon when idle; one tap expands, a second tap imports |
-| Dark-page aware | Panel colors follow the page background, so dark pages do not get a bright block |
+| Two copy fallbacks | If the client does not open, the panel offers "Copy source link" and "Copy import link" |
+| Draggable | The button can be moved away from the text |
+| Accidental-tap guard | Collapses to an icon when idle; one tap expands, a second tap imports |
+| Dark-page aware | Panel colors follow the page background, keeping dark pages low-contrast |
 
 ## Supported source types
 
@@ -71,7 +71,7 @@ Book sources keep the legacy `yuedu://` path, which both Legado 2 and Legado 3 a
 
 The first eight are Legado forks sharing the same intent filter, so the button can wake them directly.
 
-The remaining clients expose no public import scheme, so the script cannot wake them: on iOS and desktop, copy the source link from the address bar and paste it into the app's Network Import; if the app only accepts local files, save the page as `.json` and import that. The same applies to similar iOS readers such as 源阅.
+The remaining clients expose no public import scheme, so the script cannot wake them: on iOS and desktop, copy the source link from the address bar and paste it into the client's Network Import; if the client only accepts local files, save the page as `.json` and import that. Similar iOS readers such as 源阅 behave the same way.
 
 ## Install
 
@@ -89,15 +89,15 @@ The remaining clients expose no public import scheme, so the script cannot wake 
 ## Usage
 
 1. Open a source link. A floating button appears in the bottom-right corner when the page contains source data; other pages are ignored.
-2. Tap it. The app opens on Network Import and completes the import.
+2. Tap it. The client opens on Network Import and completes the import.
 3. When more than 10 sources are found, a list is shown first for confirmation.
-4. If the app does not open, the panel offers "Copy source link" and "Copy import link" — the first works on iOS, desktop and Network Import; the second is for pasting directly on Android.
+4. If the client does not open, the panel offers "Copy source link" and "Copy import link" — the first works on iOS, desktop and Network Import; the second is for pasting directly on Android.
 
 ## Compatibility and known limitations
 
-- **Redirected links**: some apps open a redirect page instead of the source data, so the script cannot detect it. Pair it with [redirect](https://greasyfork.org/zh-CN/scripts/416338).
-- **Via rendering JSON**: Via renders JSON pages with oversized type and layout, pushing the button into a corner. Pair it with [JSON Viewer](https://greasyfork.org/zh-CN/scripts/508417-json-viewer) for a clearly better result; that script can stutter on very long files.
-- **Desktop and iOS**: no public scheme, so copying the link and importing manually is the only route.
+- **Redirected links**: some clients produce links that redirect, so the landing page is not the source data and cannot be detected. Pair with [redirect](https://greasyfork.org/zh-CN/scripts/416338).
+- **Via rendering JSON**: Via renders JSON pages with oversized type and layout, crowding the button. Pair with [JSON Viewer](https://greasyfork.org/zh-CN/scripts/508417-json-viewer) for clearly better rendering; that script may stutter on very long files.
+- **Desktop and iOS**: no public scheme, so the link must be copied and imported manually.
 - **Similar script**: [Coolapk link decoder](https://greasyfork.org/zh-CN/scripts/586569).
 
 ## Repository layout
