@@ -29,10 +29,9 @@ This script injects a floating button into source pages. On tap, it passes the c
 | Mixed-package detection | When a single file contains several types, the type is inferred from content rather than the file name |
 | Confirm before bulk import | More than 10 sources at once shows a list (first 5 + total) for confirmation before anything is imported |
 | Button shows the name | The button label is the source name, or the group name when one exists |
-| Two copy fallbacks | If the client does not open, the panel offers "Copy source link" and "Copy import link" |
-| Draggable | The button can be moved away from the text |
-| Accidental-tap guard | Collapses to an icon when idle; one tap expands, a second tap imports |
-| Dark-page aware | Panel colors follow the page background, keeping dark pages low-contrast |
+| Copy fallback | When the client does not open, the panel offers "Copy source link" and "Copy import link" for iOS, desktop and manual import |
+
+The button can also be dragged, collapses when idle, and follows the page's light/dark background.
 
 ## Supported source types
 
@@ -83,7 +82,7 @@ The remaining clients expose no public import scheme, so the script cannot wake 
 
 **2. Install the script**
 
-- Greasyfork: <https://greasyfork.org/zh-CN/scripts/603178>
+- [Greasyfork page](https://greasyfork.org/zh-CN/scripts/603178)
 - Or open [`legado-import-helper.user.js`](legado-import-helper.user.js) from this repository — the manager will offer to install it
 
 ## Usage
