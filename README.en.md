@@ -5,7 +5,7 @@
 Open a Legado source link in a mobile browser; the floating button in the bottom-right corner opens the client's **Network Import** in one tap.
 
 [![License](https://img.shields.io/badge/license-MIT-4f46e5)](LICENSE)
-[![Version](https://img.shields.io/badge/version-2.4.1-4f46e5)](legado-import-helper.user.js)
+[![Version](https://img.shields.io/badge/version-2.4.2-4f46e5)](legado-import-helper.user.js)
 [![Platform](https://img.shields.io/badge/platform-Android%20%7C%20HarmonyOS%20%7C%20iOS-4f46e5)](#supported-clients)
 
 [简体中文](README.md) · English

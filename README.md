@@ -5,7 +5,7 @@
 在手机浏览器中打开 Legado 源链接，右下角悬浮按钮一键调起客户端的「网络导入」。
 
 [![License](https://img.shields.io/badge/license-MIT-4f46e5)](LICENSE)
-[![Version](https://img.shields.io/badge/version-2.4.1-4f46e5)](legado-import-helper.user.js)
+[![Version](https://img.shields.io/badge/version-2.4.2-4f46e5)](legado-import-helper.user.js)
 [![Platform](https://img.shields.io/badge/platform-Android%20%7C%20HarmonyOS%20%7C%20iOS-4f46e5)](#支持的客户端)
 
 简体中文 · [English](README.en.md)
