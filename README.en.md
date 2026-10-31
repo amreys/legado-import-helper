@@ -2,7 +2,7 @@
 
 # Legado / Yuedu Source Importer (Mobile)
 
-Open a Legado source link in a mobile browser; the floating button in the bottom-right corner opens the client's **Network Import** in one tap.
+Open a Legado source link in a mobile browser. A button showing the source name appears in the bottom-right corner; tap it to import book sources, RSS sources, replace rules, dict rules, TTS engines, themes, reading layouts and TOC rules in one tap. A list is shown for confirmation when importing more than 10 sources.
 
 [![License](https://img.shields.io/badge/license-MIT-4f46e5)](LICENSE)
 [![Version](https://img.shields.io/badge/version-2.4.2-4f46e5)](legado-import-helper.user.js)
@@ -10,7 +10,7 @@ Open a Legado source link in a mobile browser; the floating button in the bottom
 
 [简体中文](README.md) · English
 
-<img src="screenshots/hero.png" width="880" alt="A floating button appears on the source page; one tap opens Network Import, with a confirmation list when more than 10 sources are found">
+<img src="screenshots/hero.png" width="880" alt="A button showing the source name appears in the bottom-right corner; tapping it opens Network Import, with a confirmation list when more than 10 sources are found">
 
 </div>
 
@@ -18,13 +18,13 @@ Open a Legado source link in a mobile browser; the floating button in the bottom
 
 Legado supports importing from a URL, but source links on web pages have no direct entry point: the URL must be copied, the client opened, Book Sources → Network Import selected, then pasted and confirmed.
 
-This script injects a floating button into source pages. On tap, it passes the current page URL to the client through the `legado://` / `yuedu://` scheme and opens Network Import directly, removing the copy-paste step and the risk of malformed hand-built URLs.
+This script injects a button into source pages. The button label is the source name or group name; on tap, it passes the current page URL to the client through the `legado://` / `yuedu://` scheme and opens Network Import directly, removing the copy-paste step and the risk of malformed hand-built URLs.
 
 ## Features
 
 | Feature | Description |
 |:--|:--|
-| One-tap network import | Opens the client's Network Import with the URL pre-filled |
+| One-tap import | Opens the client's Network Import with the URL pre-filled |
 | Eight source types | Book sources, RSS sources, replace rules, dict rules, TTS engines, themes, reading layouts, TOC rules |
 | Mixed-package detection | When a single file contains several types, the type is inferred from content rather than the file name |
 | Confirm before bulk import | More than 10 sources at once shows a list (first 5 + total) for confirmation before anything is imported |
@@ -87,7 +87,7 @@ The remaining clients expose no public import scheme, so the script cannot wake 
 
 ## Usage
 
-1. Open a source link. A floating button appears in the bottom-right corner when the page contains source data; other pages are ignored.
+1. Open a source link. A button showing the source name appears in the bottom-right corner when the page contains source data; other pages are ignored.
 2. Tap it. The client opens on Network Import and completes the import.
 3. When more than 10 sources are found, a list is shown first for confirmation.
 4. If the client does not open, the panel offers "Copy source link" and "Copy import link" — the first works on iOS, desktop and Network Import; the second is for pasting directly on Android.
