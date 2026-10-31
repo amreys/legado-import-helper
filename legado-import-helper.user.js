@@ -1,11 +1,11 @@
 // ==UserScript==
 // @name         阅读书源/订阅源识别导入（移动版）
 // @name:en      Legado / Yuedu Source Importer (Mobile)
-// @namespace    https://greasyfork.org/users/you
+// @namespace    https://greasyfork.org/users/ZAA66
 // @version      2.4.2
 // @description  在手机浏览器中打开阅读（Legado）的源链接，页面右下角显示源名称按钮，点击即可一键导入书源、订阅源、替换规则、字典规则、朗读引擎、主题、排版与目录规则。单次导入超过 10 个源时，将先列出清单以供确认。
 // @description:en Open a Legado source link in a mobile browser. A button showing the source name appears in the bottom-right corner; tap it to import book sources, RSS sources, replace rules, dict rules, TTS engines, themes, reading layouts and TOC rules in one tap. A list is shown for confirmation when importing more than 10 sources.
-// @author       you
+// @author       ZAA66
 // @homepageURL  https://greasyfork.org/zh-CN/scripts/603178
 // @supportURL   https://greasyfork.org/zh-CN/scripts/603178/feedback
 // @source       https://github.com/amreys/legado-import-helper
