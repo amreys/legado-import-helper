@@ -14,7 +14,7 @@ Open a Legado source link in a mobile browser — a button appears in the bottom
 
 </div>
 
-## What it solves
+## Overview
 
 Legado already supports importing from a URL. The friction is on the web side: a source link on a web page cannot be opened directly. You have to copy the URL, switch to the app, go to Book Sources, pick Network Import, paste, and confirm.
 
